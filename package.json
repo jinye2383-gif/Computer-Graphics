@@ -1,0 +1,9 @@
+{
+  "name": "ap1-sierpinski-submission",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "test": "node --test tests/geometry.test.mjs"
+  }
+}

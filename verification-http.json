@@ -1,0 +1,60 @@
+{
+  "timestamp": "2026-10-10T05:10:11.190Z",
+  "url": "http://127.0.0.1:5174",
+  "browser": "155.0.4283.45",
+  "checks": [
+    "All eight local JavaScript files load over HTTP",
+    "WebGL 2.0 renders 20000 chaos points",
+    "Keyboard selects LINES and TRIANGLES",
+    "Solid framebuffer has visible pixels and no GL errors",
+    "No failed requests or JavaScript exceptions"
+  ],
+  "graphics": {
+    "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "error": 0,
+    "visiblePixels": 26309
+  },
+  "assets": [
+    {
+      "url": "http://127.0.0.1:5174/",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5174/styles.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5174/Common/webgl-utils.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5174/Common/MV.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5174/js/renderer.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5174/js/geometry.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5174/Common/initShaders.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5174/js/interaction.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5174/js/ui.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:5174/js/app.js",
+      "status": 200
+    }
+  ],
+  "errors": []
+}

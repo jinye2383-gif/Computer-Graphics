@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="交互式 WebGL Sierpinski 垫片：混沌游戏、递归细分与多边形探索。"><title>Computer Graphics · AP1 交互式分形</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%2365dfba' d='M16 2 2 28h28z'/%3E%3Cpath fill='%23101b25' d='m16 28-7-13h14z'/%3E%3C/svg%3E"><link rel="stylesheet" href="styles.css"></head>
+<body>
+<header><a class="brand" href="./"><span class="brand-mark">△</span> FRACTAL <b>LAB</b></a><span class="course">AP1 / 交互式 2D 分形</span><span class="gl-tag" id="gl-tag">WebGL · 初始化</span></header>
+<main>
+<aside class="panel">
+<div class="panel-heading"><span class="eyebrow">AP1 / WEBGL 2.0</span><h1>交互式 2D 分形</h1><p>用混沌游戏和递归细分探索 Sierpinski 垫片。</p></div>
+<fieldset><legend>生成算法</legend><div class="segmented"><button id="chaos" class="active" aria-pressed="true">混沌游戏</button><button id="recursive" aria-pressed="false">递归细分</button></div></fieldset>
+<fieldset><legend>渲染模式 <small>快捷键 1 / 2 / 3</small></legend><div class="modes"><button data-mode="points" class="active" aria-pressed="true"><span>⠿</span>点云</button><button data-mode="lines" aria-pressed="false"><span>△</span>线框</button><button data-mode="solid" aria-pressed="false"><span>▲</span>实体</button></div><p class="help" id="mode-note">随机迭代点以 gl.POINTS 绘制。</p></fieldset>
+<div class="control" id="count-control"><label for="count">目标点数 <output id="count-value">20,000</output></label><input id="count" type="range" min="5000" max="100000" step="1000" value="20000"><div class="range-labels"><span>5,000</span><span>100,000</span></div></div>
+<div class="control" id="depth-control" hidden><label for="depth">递归深度 <output id="depth-value">5</output></label><input id="depth" type="number" min="0" max="6" step="1" value="5"><p class="help">0–6 层；每层保留三个角落三角形。</p></div>
+<div class="control" id="size-control"><label for="size">点大小 <output id="size-value">2.0 px</output></label><input id="size" type="range" min="1" max="8" step="0.5" value="2"></div>
+<div class="control"><label for="palette">配色方案</label><select id="palette"><option value="mint">薄荷 / Mint</option><option value="sunset">落日 / Sunset</option><option value="ice">极光 / Aurora</option></select><div class="swatches" id="swatches"><i></i><i></i><i></i></div></div>
+<div class="control" id="polygon-control"><label for="polygon">多边形探索 <span class="pill">E1</span></label><select id="polygon"><option value="3">三角形 · Sierpinski</option><option value="5">五边形 · Pentaflake</option><option value="6">六边形 · Hexaflake</option></select><p class="help" id="ratio-note">向随机顶点移动 1/2 的距离。</p></div>
+<div class="actions"><button id="pause" class="primary">暂停生长 <kbd>Space</kbd></button><button id="restart">重新生长</button><button id="reset">重置视图</button></div>
+<p class="panel-footer">拖动平移 · 滚轮缩放 · 空格暂停</p>
+</aside>
+<section class="workspace" aria-label="分形画布">
+<div class="canvas-heading"><div><span class="eyebrow">LIVE CANVAS</span><h2 id="figure-title">Sierpinski 垫片</h2></div><span id="algorithm-badge">混沌游戏 / POINTS</span></div>
+<canvas id="canvas" aria-label="分形图形；按住鼠标左键拖动平移，滚轮缩放" tabindex="0"></canvas><div id="error" role="alert" hidden></div>
+<div class="canvas-footer"><span><i class="status-dot"></i><span id="status">逐点生长</span></span><span id="zoom">缩放 1.00×</span><span id="draw-count">0 / 20,000 点</span></div>
+<div class="progress"><div id="progress-bar"></div></div>
+<div class="facts"><div><span>生成结构</span><strong id="structure">3 个顶点 · 1/2 迭代</strong></div><div><span>绘制数据</span><strong id="data-size">Float32Array → VBO</strong></div><div><span>观察提示</span><strong id="observation">局部与整体，拥有相同的结构。</strong></div></div>
+</section>
+</main>
+<script id="vertex-shader" type="x-shader/x-vertex">#version 300 es
+in vec2 a_position;
+uniform vec2 u_scale;
+uniform vec2 u_pan;
+uniform float u_zoom;
+uniform float u_size;
+out float v_height;
+void main() {
+  gl_Position = vec4((a_position * u_zoom + u_pan) * u_scale, 0.0, 1.0);
+  gl_PointSize = u_size;
+  v_height = clamp((a_position.y + 0.82) / 1.7, 0.0, 1.0);
+}
+</script>
+<script id="fragment-shader" type="x-shader/x-fragment">#version 300 es
+precision mediump float;
+uniform vec3 u_bottom;
+uniform vec3 u_middle;
+uniform vec3 u_top;
+uniform bool u_points;
+in float v_height;
+out vec4 fragmentColor;
+void main() {
+  if (u_points && length(gl_PointCoord - vec2(0.5)) > 0.5) discard;
+  vec3 color = v_height < 0.5
+    ? mix(u_bottom, u_middle, v_height * 2.0)
+    : mix(u_middle, u_top, (v_height - 0.5) * 2.0);
+  fragmentColor = vec4(color, 1.0);
+}
+</script>
+<!-- Classic deferred scripts work through file:// and through any static server. -->
+<script defer src="Common/webgl-utils.js"></script>
+<script defer src="Common/initShaders.js"></script>
+<script defer src="Common/MV.js"></script>
+<script defer src="js/geometry.js"></script>
+<script defer src="js/renderer.js"></script>
+<script defer src="js/interaction.js"></script>
+<script defer src="js/ui.js"></script>
+<script defer src="js/app.js"></script></body></html>

@@ -1,0 +1,33 @@
+{
+  "timestamp": "2026-10-10T05:09:34.138Z",
+  "url": "file:///C:/Users/asus/Desktop/%E5%9B%BE%E5%BD%A2%E5%AD%A6/AP1-%E6%AD%A3%E5%BC%8F%E6%8F%90%E4%BA%A4%E7%89%88/index.html",
+  "browser": "155.0.4283.45",
+  "checks": [
+    "Chaos grows to 20000 points",
+    "Real WebGL 2.0 / GLSL ES 3.00 context with all three Common libraries; nonempty framebuffer and no GL error",
+    "Space pauses and resumes growth",
+    "Key 2 selects LINES and recursive algorithm",
+    "Depth 6 renders 729 leaf triangles without crashing",
+    "Key 3 selects TRIANGLES",
+    "Key 1 shows same recursive leaf vertex set as points",
+    "Wheel zoom",
+    "Mouse drag changes rendered image",
+    "View reset",
+    "All three palette controls",
+    "E1 pentagon and hexagon grow to target",
+    "Minimum point count control",
+    "Point size control",
+    "Depth 0 and clamping invalid depth to 6",
+    "Mobile layout has no horizontal overflow",
+    "No browser JavaScript exceptions"
+  ],
+  "pixels": {
+    "ink": 30571,
+    "error": 0,
+    "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "shaderVersion": "WebGL GLSL ES 3.00 (OpenGL ES GLSL ES 3.0 Chromium)",
+    "isWebGL2": true,
+    "common": true
+  },
+  "errors": []
+}
