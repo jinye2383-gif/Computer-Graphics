@@ -1,4 +1,4 @@
-/** 鼠标、键盘和触屏；通过 actions 修改应用参数。 */
+/** 鼠标和键盘；通过 actions 修改应用参数。 */
 (function (lab) {
   'use strict';
   function bindInteraction(canvas, state, actions) {
@@ -48,20 +48,6 @@
         value - (value - state.pan[index]) * state.zoom / oldZoom
       );
     }, {passive: false});
-
-    canvas.addEventListener('touchstart', event => {
-      if (event.touches.length !== 1) return;
-      dragging = true;
-      previous = coordinate(event.touches[0]);
-    }, {passive: true});
-    canvas.addEventListener('touchmove', event => {
-      if (dragging && event.touches.length === 1) {
-        event.preventDefault();
-        move(event.touches[0]);
-      }
-    }, {passive: false});
-    canvas.addEventListener('touchend', stop);
-    canvas.addEventListener('touchcancel', stop);
 
     window.addEventListener('keydown', event => {
       if (event.ctrlKey || event.altKey || event.metaKey || event.repeat) return;

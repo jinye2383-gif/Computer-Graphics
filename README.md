@@ -1,6 +1,6 @@
 # Computer Graphics · AP1 交互式 2D 分形
 
-原生 WebGL 2.0 + JavaScript，实现 Sierpinski 垫片的混沌游戏与递归细分。使用教材 `Common/initShaders.js`、`MV.js`、`webgl-utils.js`；着色器为 GLSL ES 3.00。无构建步骤、无 CDN、无运行时下载。
+原生 WebGL 2.0 + JavaScript，实现 Sierpinski 垫片的混沌游戏与递归细分。使用教材 `Common/initShaders.js`、`MV.js`、`webgl-utils.js`；着色器为 GLSL ES 3.00。无构建步骤、无 CDN、无运行时下载。界面仅针对电脑端，建议浏览器窗口宽度至少 1100 像素，使用鼠标和键盘操作。
 
 ## 运行与提交
 
@@ -39,7 +39,7 @@
 
 混沌游戏生成离散随机点，使用 POINTS；选择线框或实体时自动切换到递归算法，界面同步显示。递归三种模式共享同一组叶三角形；递归点云显示叶顶点，目标顶点数由深度决定，为 `3 × 3^depth`，可能包含重合顶点。
 
-编辑输入框或选择框时不触发全局快捷键，以保留原生编辑行为。按钮上的空格保持原生点击行为。点云约 7 秒生长完成；少量递归顶点生长更快。切到后台不会累计生长进度。触屏支持单指平移。
+编辑输入框或选择框时不触发全局快捷键，以保留原生编辑行为。按钮上的空格保持原生点击行为。点云约 7 秒生长完成；少量递归顶点生长更快。切到后台不会累计生长进度。
 
 ## 两种生成算法
 
@@ -83,12 +83,12 @@ E1 推广到正五边形和正六边形：使用 `p = v + r * (p - v)`；r 是�
 
 ```text
 index.html                页面入口、参数控件和着色器源码
-styles.css                布局、配色、响应式样式
+styles.css                桌面布局与配色
 Common/                   教材工具库与来源说明
 js/
   geometry.js             混沌游戏、递归细分、缓冲区组织
   renderer.js             上下文、着色器初始化、VBO、drawArrays
-  interaction.js          鼠标、滚轮、键盘、触屏
+  interaction.js          鼠标、滚轮、键盘
   ui.js                   面板事件与可见状态
   app.js                  应用状态、算法切换、生长动画
 screenshots/              真实运行截图
@@ -101,7 +101,7 @@ README.md                 本说明
 
 ## 测试与演示
 
-2026-10-10 已验证：13 项算法测试通过；直接打开 index.html 的 17 项浏览器交互检查通过；HTTP 加载的 5 项集成检查通过。两种打开方式均创建真实 WebGL 2.0 上下文，未发现 JavaScript 异常或 WebGL 绘制错误。HTTP 集成检查可运行 `node tests/http-check.cjs`。
+2026-10-13 已完成取消手机适配后的桌面回归：直接打开 index.html 的 16 项浏览器交互检查全部通过，包含鼠标拖动、滚轮缩放、键盘、参数控件和 WebGL 2.0 绘制。此前 13 项算法测试及 5 项 HTTP 检查的记录仍保留；HTTP 集成检查可运行 `node tests/http-check.cjs`。
 
 算法测试：`node --test tests/geometry.test.mjs`，覆盖 0–6 层数量、面积、三种缓冲区组织、10 万点的坐标范围和异常输入。
 
