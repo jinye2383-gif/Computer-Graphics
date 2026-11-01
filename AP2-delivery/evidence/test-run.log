@@ -1,0 +1,10 @@
+PASS Earth orbit radius remains 6.6
+PASS Moon remains relative to Earth at radius 1.65
+PASS Moon does not inherit Earth spin or tilt
+PASS Earth axis is 23.5 degrees and fixed across orbital phases
+PASS Moon orbit plane inclination is 5.1 degrees
+PASS Manual matrix multiplication order affects translation
+PASS Oblate Saturn keeps its orbit radius while shortening the polar radius
+PASS Inverse-transpose normals remain orthogonal under non-uniform scale
+PASS 13 bitmap textures loaded and WebGL has no error
+All 18 checks passed.

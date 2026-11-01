@@ -1,0 +1,26 @@
+{
+  "result": "PASS",
+  "defaultGlow": 35,
+  "pixels": {
+    "changedPixels": 144783,
+    "whitePixels": 0,
+    "maxDelta": 53,
+    "pixelCount": 1034880
+  },
+  "closeTexture": {
+    "id": "mercury",
+    "size": [
+      8192,
+      4096
+    ]
+  },
+  "checks": [
+    "native 8K Mercury upload",
+    "visible bounded corona",
+    "slider",
+    "orthographic glow",
+    "rapid focus switch",
+    "reset releases close-up texture"
+  ],
+  "errors": []
+}

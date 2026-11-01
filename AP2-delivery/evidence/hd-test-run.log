@@ -1,0 +1,218 @@
+{
+  "date": "2026-10-27T02:04:45.244Z",
+  "browser": "156.0.4314.42",
+  "sphereTriangles": 262144,
+  "ringTriangles": 4096,
+  "uintIndices": true,
+  "asteroidTriangles": 435200,
+  "textureInfo": {
+    "ring": {
+      "source": [
+        8192,
+        500
+      ],
+      "gpu": [
+        8192,
+        512
+      ]
+    },
+    "clouds": {
+      "source": [
+        2048,
+        1024
+      ],
+      "gpu": [
+        2048,
+        1024
+      ]
+    },
+    "moon": {
+      "source": [
+        2048,
+        1024
+      ],
+      "gpu": [
+        2048,
+        1024
+      ]
+    },
+    "venus_surface": {
+      "source": [
+        4096,
+        2048
+      ],
+      "gpu": [
+        4096,
+        2048
+      ]
+    },
+    "earth_night": {
+      "source": [
+        8192,
+        4096
+      ],
+      "gpu": [
+        4096,
+        2048
+      ]
+    },
+    "uranus": {
+      "source": [
+        2048,
+        1024
+      ],
+      "gpu": [
+        2048,
+        1024
+      ]
+    },
+    "neptune": {
+      "source": [
+        2048,
+        1024
+      ],
+      "gpu": [
+        2048,
+        1024
+      ]
+    },
+    "sun": {
+      "source": [
+        4096,
+        2048
+      ],
+      "gpu": [
+        4096,
+        2048
+      ]
+    },
+    "saturn": {
+      "source": [
+        4096,
+        2048
+      ],
+      "gpu": [
+        4096,
+        2048
+      ]
+    },
+    "jupiter": {
+      "source": [
+        4096,
+        2048
+      ],
+      "gpu": [
+        4096,
+        2048
+      ]
+    },
+    "earth_daymap": {
+      "source": [
+        8192,
+        4096
+      ],
+      "gpu": [
+        4096,
+        2048
+      ]
+    },
+    "mars": {
+      "source": [
+        8192,
+        4096
+      ],
+      "gpu": [
+        4096,
+        2048
+      ]
+    },
+    "mercury": {
+      "source": [
+        8192,
+        4096
+      ],
+      "gpu": [
+        4096,
+        2048
+      ]
+    }
+  },
+  "anisotropy": true,
+  "views": [
+    {
+      "id": "sun",
+      "glError": 0,
+      "closeTexture": null
+    },
+    {
+      "id": "mercury",
+      "glError": 0,
+      "closeTexture": {
+        "id": "mercury",
+        "size": [
+          8192,
+          4096
+        ]
+      }
+    },
+    {
+      "id": "venus_surface",
+      "glError": 0,
+      "closeTexture": null
+    },
+    {
+      "id": "earth",
+      "glError": 0,
+      "closeTexture": {
+        "id": "earth_daymap",
+        "size": [
+          8192,
+          4096
+        ]
+      }
+    },
+    {
+      "id": "moon",
+      "glError": 0,
+      "closeTexture": null
+    },
+    {
+      "id": "mars",
+      "glError": 0,
+      "closeTexture": {
+        "id": "mars",
+        "size": [
+          8192,
+          4096
+        ]
+      }
+    },
+    {
+      "id": "jupiter",
+      "glError": 0,
+      "closeTexture": null
+    },
+    {
+      "id": "saturn",
+      "glError": 0,
+      "closeTexture": null
+    },
+    {
+      "id": "uranus",
+      "glError": 0,
+      "closeTexture": null
+    },
+    {
+      "id": "neptune",
+      "glError": 0,
+      "closeTexture": null
+    },
+    {
+      "id": "belt",
+      "glError": 0,
+      "closeTexture": null
+    }
+  ],
+  "errors": [],
+  "measuredFPS": 165.0340361945874
+}

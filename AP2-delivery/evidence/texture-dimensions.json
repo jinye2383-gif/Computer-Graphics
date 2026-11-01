@@ -1,0 +1,58 @@
+{
+  "clouds.jpg": [
+    2048,
+    1024
+  ],
+  "earth_daymap.jpg": [
+    8192,
+    4096
+  ],
+  "earth_night.jpg": [
+    8192,
+    4096
+  ],
+  "jupiter.jpg": [
+    4096,
+    2048
+  ],
+  "mars.jpg": [
+    8192,
+    4096
+  ],
+  "mercury.jpg": [
+    8192,
+    4096
+  ],
+  "moon.jpg": [
+    2048,
+    1024
+  ],
+  "neptune.jpg": [
+    2048,
+    1024
+  ],
+  "ring.jpg": [
+    512,
+    256
+  ],
+  "ring.png": [
+    8192,
+    500
+  ],
+  "saturn.jpg": [
+    4096,
+    2048
+  ],
+  "sun.jpg": [
+    4096,
+    2048
+  ],
+  "uranus.jpg": [
+    2048,
+    1024
+  ],
+  "venus_surface.jpg": [
+    4096,
+    2048
+  ]
+}

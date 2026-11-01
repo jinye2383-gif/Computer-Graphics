@@ -1,0 +1,7 @@
+{
+  "scenario": "OES_element_index_uint unavailable",
+  "sphereTriangles": 122880,
+  "glError": 0,
+  "errors": [],
+  "result": "PASS"
+}

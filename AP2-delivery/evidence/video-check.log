@@ -1,0 +1,22 @@
+[libvpx-vp9 @ 000001d8e7471d80] v1.14.1
+Input #0, matroska,webm, from 'evidence/05-tour-10s.webm':
+  Metadata:
+    encoder         : Chrome
+  Duration: 00:00:10.27, start: 0.000000, bitrate: 4707 kb/s
+  Stream #0:0(eng): Video: vp9 (libvpx-vp9) (Profile 0), yuv420p(tv, unknown/bt709/iec61966-2-1), 1120x924, SAR 1:1 DAR 40:33, 30 tbr, 1k tbn (default)
+      Metadata:
+        alpha_mode      : 1
+[libvpx-vp9 @ 000001d8e755bbc0] v1.14.1
+Stream mapping:
+  Stream #0:0 -> #0:0 (vp9 (libvpx-vp9) -> png (native))
+Press [q] to stop, [?] for help
+Output #0, image2, to 'evidence/07-video-frame.png':
+  Metadata:
+    encoder         : Lavf61.1.100
+  Stream #0:0(eng): Video: png, rgb24(pc, gbr/bt709/iec61966-2-1, progressive), 1120x924 [SAR 1:1 DAR 40:33], q=2-31, 200 kb/s, 30 fps, 30 tbn (default)
+      Metadata:
+        alpha_mode      : 1
+        encoder         : Lavc61.3.100 png
+[out#0/image2 @ 000001d8e74686c0] video:171KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+frame=    1 fps=0.0 q=-0.0 Lsize=N/A time=00:00:00.03 bitrate=N/A speed=0.057x    
+Exit code: 0

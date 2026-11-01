@@ -1,0 +1,80 @@
+[
+  {
+    "file": "dist/assets/sun.jpg",
+    "source": "https://raw.githubusercontent.com/rajpatel5/Solar-System/master/8k_sun.jpg",
+    "bytes": 3696361,
+    "sha256": "f22b1cfb306ddce72a7e3b628668a0175b745038ce6268557cb2f7f1bdf98b9d"
+  },
+  {
+    "file": "dist/assets/moon.jpg",
+    "source": "https://raw.githubusercontent.com/Shriisoot/Planets-texture/main/2k_moon.jpg",
+    "bytes": 1053869,
+    "sha256": "2764ba6535ea0481a062846ee033cc7a909dae05b31a8fd13f3e98f3a7fd92bd"
+  },
+  {
+    "file": "dist/assets/mercury.jpg",
+    "source": "https://raw.githubusercontent.com/Shriisoot/Planets-texture/main/8k_mercury.jpg",
+    "bytes": 15035740,
+    "sha256": "5c8bd885ae3571c6ba2cd34b3446b9c6d767e314bf0ee8c1d5c147cadd388fc3"
+  },
+  {
+    "file": "dist/assets/venus_surface.jpg",
+    "source": "https://raw.githubusercontent.com/Shriisoot/Planets-texture/main/4k_venus_atmosphere.jpg",
+    "bytes": 1546146,
+    "sha256": "a14aeba3c6ad7a56f989bb32008dec548077aeded420495b34df98f2dc14ba91"
+  },
+  {
+    "file": "dist/assets/earth_daymap.jpg",
+    "source": "https://raw.githubusercontent.com/Shriisoot/Planets-texture/main/8k_earth_daymap.jpg",
+    "bytes": 4565076,
+    "sha256": "88ab060b6e7d241cfc590c69f528fab2b3247b738d40124cb590999a6fe44abc"
+  },
+  {
+    "file": "dist/assets/earth_night.jpg",
+    "source": "https://raw.githubusercontent.com/Shriisoot/Planets-texture/main/8k_earth_nightmap.jpg",
+    "bytes": 3144468,
+    "sha256": "9894e83a585a22c1c425e7ca4f987a9ba625bf08ecee45d3c9dcacae3c2ad5f7"
+  },
+  {
+    "file": "dist/assets/clouds.jpg",
+    "source": "https://raw.githubusercontent.com/Shriisoot/Planets-texture/main/2k_earth_clouds.jpg",
+    "bytes": 965676,
+    "sha256": "fffd7f68d41b37274822150e54a6ef605af1d3ec35624d9f628c3b896bfa42ed"
+  },
+  {
+    "file": "dist/assets/mars.jpg",
+    "source": "https://raw.githubusercontent.com/Shriisoot/Planets-texture/main/8k_mars.jpg",
+    "bytes": 8396951,
+    "sha256": "4cc52149924abc6ae507d63032f994e1d42a55cb82c09e002d1a567ff66c23ee"
+  },
+  {
+    "file": "dist/assets/jupiter.jpg",
+    "source": "https://raw.githubusercontent.com/Shriisoot/Planets-texture/main/8k_jupiter.jpg",
+    "bytes": 3080980,
+    "sha256": "0bd844bf20822c4e3e80882b077859833c0dac44c7e4e1e0cd63d1b1b6d43085"
+  },
+  {
+    "file": "dist/assets/saturn.jpg",
+    "source": "https://raw.githubusercontent.com/Shriisoot/Planets-texture/main/8k_saturn.jpg",
+    "bytes": 1098204,
+    "sha256": "0d39a4a490c87c3edabe00a3881a29bb3418364178c79c534fe0986e97e09853"
+  },
+  {
+    "file": "dist/assets/uranus.jpg",
+    "source": "https://raw.githubusercontent.com/Shriisoot/Planets-texture/main/2k_uranus.jpg",
+    "bytes": 77751,
+    "sha256": "d15239d46f82d3ea13d2b260b5b29b2a382f42f2916dae0694d0387b1204a09d"
+  },
+  {
+    "file": "dist/assets/neptune.jpg",
+    "source": "https://raw.githubusercontent.com/Shriisoot/Planets-texture/main/2k_neptune.jpg",
+    "bytes": 241580,
+    "sha256": "cb42ea82709741d28b0af44d8b283cbc6dbd0c521a7f0e1e1e010ade00977df6"
+  },
+  {
+    "file": "dist/assets/ring.png",
+    "source": "https://raw.githubusercontent.com/Shriisoot/Planets-texture/main/8k_saturn_ring_alpha.png",
+    "bytes": 64790,
+    "sha256": "f1f826933c9ff87d64ecf0518d6256b8ed990b003722794f67e96e3d2b876ae4"
+  }
+]

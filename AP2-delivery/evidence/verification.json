@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-01T10:29:33.856Z",
+  "browser": "156.0.4314.58",
+  "checks": [
+    {
+      "name": "Earth orbit radius remains 6.6",
+      "result": "PASS"
+    },
+    {
+      "name": "Moon remains relative to Earth at radius 1.65",
+      "result": "PASS"
+    },
+    {
+      "name": "Moon does not inherit Earth spin or tilt",
+      "result": "PASS"
+    },
+    {
+      "name": "Earth axis is 23.5 degrees and fixed across orbital phases",
+      "result": "PASS"
+    },
+    {
+      "name": "Moon orbit plane inclination is 5.1 degrees",
+      "result": "PASS"
+    },
+    {
+      "name": "Manual matrix multiplication order affects translation",
+      "result": "PASS"
+    },
+    {
+      "name": "Oblate Saturn keeps its orbit radius while shortening the polar radius",
+      "result": "PASS"
+    },
+    {
+      "name": "Inverse-transpose normals remain orthogonal under non-uniform scale",
+      "result": "PASS"
+    },
+    {
+      "name": "13 bitmap textures loaded and WebGL has no error",
+      "result": "PASS"
+    },
+    {
+      "name": "O key switches projection; same camera/time screenshots captured",
+      "result": "PASS"
+    },
+    {
+      "name": "Space pauses and resumes simulation",
+      "result": "PASS"
+    },
+    {
+      "name": "Orbit speed, spin speed, tilt sliders update simulation state",
+      "result": "PASS"
+    },
+    {
+      "name": "Zero spin speed freezes spin while orbit advances",
+      "result": "PASS"
+    },
+    {
+      "name": "Orbit toggle works",
+      "result": "PASS"
+    },
+    {
+      "name": "Drag takes camera; tour resumes without position jump",
+      "result": "PASS"
+    },
+    {
+      "name": "10-second live WebGL canvas roaming recorded via MediaRecorder",
+      "result": "PASS",
+      "bytes": 5827869,
+      "mime": "video/webm;codecs=vp9"
+    },
+    {
+      "name": "Mobile width has no horizontal overflow",
+      "result": "PASS"
+    },
+    {
+      "name": "No browser JS errors or WebGL errors",
+      "result": "PASS"
+    }
+  ],
+  "errors": [],
+  "frames": 4217
+}
